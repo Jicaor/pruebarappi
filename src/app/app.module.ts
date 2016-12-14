@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { ProductosComponent } from './productos/productos.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -15,7 +16,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ProductosComponent
   ],
   imports: [
     BrowserModule,
