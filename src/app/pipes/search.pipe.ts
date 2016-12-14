@@ -6,7 +6,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class SearchPipe implements PipeTransform {
 
   transform(value: any, args?: any): any {
-    return null;
+    return value.filter((item)=> item.name.toUpperCase().startsWith(args.toUpperCase()));
   }
 
 }
+

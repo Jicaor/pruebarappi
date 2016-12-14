@@ -1,12 +1,22 @@
 import { Pipe, PipeTransform } from '@angular/core';
+/*
+ * Convert value into Colombian currency
+ *
+ * Usage:
+ *   value | moneda
+ * Example:
+ *   {{ 60.000 |  modenaColombia}}
+ *   formats to: $60.000
+ */
 
 @Pipe({
-  name: 'moneda'
+  name: 'monedaColombia'
 })
-export class MonedaPipe implements PipeTransform {
+
+export class MonedaColombiaPipe implements PipeTransform {
 
   transform(value: any, args?: any): any {
-    return null;
+    return '$ '+value;
   }
 
 }
