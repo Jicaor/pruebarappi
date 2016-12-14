@@ -7,22 +7,22 @@
         <app-search (search)="buscar = $event"></app-search>
       </div>
 
-      <div class="col-xs-12 col-sm-3 ui-group">
+      <div class="col-xs-12 col-sm-3 text-center ui-group">
         <h3>Categorias</h3>
         <app-category [categories]="categorias" (select)="categoria = $event"></app-category>
       </div>
 
-      <div class="col-xs-12 col-sm-3 ui-group">
+      <div class="col-xs-12 col-sm-3 text-center ui-group">
         <h3>Tipo</h3>
         <app-type (type)="tipo = $event"></app-type>
       </div>
 
-      <div class="col-xs-12 col-sm-3 ui-group">
+      <div class="col-xs-12 col-sm-3 text-center ui-group">
         <h3>Precio</h3>
         <app-price (price)="precio = $event"></app-price>
       </div>
 
-      <div class="col-xs-12 col-sm-3 ui-group">
+      <div class="col-xs-12 col-sm-3 text-center ui-group">
         <h3>Ordenar</h3>
         <app-sort (sort)="orden = $event"></app-sort>
       </div>
