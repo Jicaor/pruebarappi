@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-type',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TypeComponent implements OnInit {
 
+  @Output() type = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
+    this.type.emit('');
   }
 
 }

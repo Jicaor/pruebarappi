@@ -1,3 +1,8 @@
-<p>
-  sort works!
-</p>
+<label>
+  <select #input (input)="sort.emit(input.value)">
+    <option value="original">Original</option>
+    <option value="name">Nombre</option>
+    <option value="lowToHighPrice">Menor a mayor precio</option>
+    <option value="highToLowPrice">Mayor a menor precio</option>
+  </select>
+</label>

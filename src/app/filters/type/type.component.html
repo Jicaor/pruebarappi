@@ -1,3 +1,8 @@
-<p>
-  type works!
-</p>
+<label>
+  <select #input (input)="type.emit(input.value)">
+    <option value="original">Todos</option>
+    <option value="available">Disponibles</option>
+    <option value="not-available">Agotados</option>
+    <option value="best-seller">Mas vendidos</option>
+  </select>
+</label>

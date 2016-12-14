@@ -18,6 +18,7 @@ import { PricePipe } from './pipes/price.pipe';
 import { SearchPipe } from './pipes/search.pipe';
 import { SortPipe } from './pipes/sort.pipe';
 import { TypePipe } from './pipes/type.pipe';
+import { AhoppingCarComponent } from './ahopping-car/ahopping-car.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -39,7 +40,8 @@ const appRoutes: Routes = [
     PricePipe,
     SearchPipe,
     SortPipe,
-    TypePipe
+    TypePipe,
+    AhoppingCarComponent
   ],
   imports: [
     BrowserModule,

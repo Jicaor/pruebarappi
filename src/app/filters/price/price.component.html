@@ -1,3 +1,7 @@
-<p>
-  price works!
-</p>
+<label>
+  <select #input (input)="price.emit(input.value)">
+    <option value="original">Todos</option>
+    <option value="greater30">Mayor a $30.000</option>
+    <option value="lower10">Menor a $10.000</option>
+  </select>
+</label>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-category',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryComponent implements OnInit {
 
+  @Input() categories;
+  @Output() select = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
+    this.select.emit('');
   }
 
 }
