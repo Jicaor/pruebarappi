@@ -1,11 +1,11 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async } from '@angular/core/testing';
-import { MonedaPipe } from './moneda.pipe';
+import { MonedaColombiaPipe } from './moneda-colombia.pipe.ts';
 
-describe('MonedaPipe', () => {
+describe('MonedaColombiaPipe', () => {
   it('create an instance', () => {
-    let pipe = new MonedaPipe();
+    let pipe = new MonedaColombiaPipe();
     expect(pipe).toBeTruthy();
   });
 });

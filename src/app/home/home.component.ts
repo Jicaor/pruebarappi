@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ProductosService } from '../services/productos.service'
+import { ProductosService } from '../services/productos.service';
+import { Producto } from './../productos/producto';
+import { Categoria } from './../productos/categoria';
 
 @Component({
   selector: 'app-home',
@@ -11,14 +13,19 @@ import { ProductosService } from '../services/productos.service'
 export class HomeComponent implements OnInit {
 
   shopping_car = [];
+
   categorias:any;
-  productos:any;
+  productos: any;
 
   constructor(private productosService: ProductosService) { }
 
   ngOnInit() {
-    this.productos = this.productosService.getProducts();
-    this.categorias = this.productosService.getCategories();
+    this.productosService.getJson()
+        .then(respuesta => this.categorias = respuesta.categories.map(data => new Categoria(data['categori_id'], data['name'])));
+
+    this.productosService.getJson()
+        .then(respuesta => this.productos = respuesta.products.map(
+            data => new Producto(data['id'], data['name'], data['price'], data['available'], data['best_seller'], data['categories'], data['img'], data['description'])));
   }
 
   addToShoppindCart(producto_escogido):void{
@@ -26,7 +33,7 @@ export class HomeComponent implements OnInit {
     var indice = this.shopping_car.indexOf(producto_escogido.producto);
 
     if(indice != -1){
-      this.shopping_car[indice].cantidad = parseInt(this.shopping_car[indice].cantidad) + 1;
+        this.shopping_car[indice].cantidad = parseInt(this.shopping_car[indice].cantidad) + 1;
     }else{
       producto_escogido.producto.cantidad = 1;
       this.shopping_car.push(producto_escogido.producto);

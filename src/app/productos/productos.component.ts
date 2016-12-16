@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, ViewEncapsulation,  Output, EventEmitter } from '@angular/core';
+import { Producto } from "./producto";
 
 @Component({
   selector: 'app-productos',
@@ -8,7 +9,7 @@ import { Component, OnInit, Input, ViewEncapsulation,  Output, EventEmitter } fr
 
 export class ProductosComponent implements OnInit {
 
-  @Input() producto:any[];
+  @Input() producto : Producto;
   @Output() seleccionado = new EventEmitter();
 
   constructor() { }

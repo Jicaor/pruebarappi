@@ -13,7 +13,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'monedaColombia'
 })
 
-export class MonedaPipe implements PipeTransform {
+export class MonedaColombiaPipe implements PipeTransform {
 
   transform(value: any, args?: any): any {
     return '$ '+value;

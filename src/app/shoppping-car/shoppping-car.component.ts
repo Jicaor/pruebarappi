@@ -1,11 +1,11 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-shopping-car',
-  templateUrl: './shopping-car.component.html',
-  styleUrls: ['./shopping-car.component.css']
+  selector: 'app-shoppping-car',
+  templateUrl: './shoppping-car.component.html',
+  styleUrls: ['./shoppping-car.component.css']
 })
-export class ShoppingCarComponent implements OnInit {
+export class ShopppingCarComponent implements OnInit {
 
   @Input() products_car;
   @Output() aumentar = new EventEmitter();

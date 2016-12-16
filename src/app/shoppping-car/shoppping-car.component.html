@@ -20,16 +20,16 @@
             <div class="panel-heading">{{product.name}}</div>
             <img src="{{product.img}}" alt="" width="100%">
             <div class="panel-body text-center">
-              <h4 class="price text-center">{{product.price | monedaColombia}}</h4>
-            </div>
+                  <h4 class="price text-center">{{product.price | monedaColombia}}</h4>
+              </div>
             <div class="text-center product-cant">
-              <button class="btn btn-success" (click)="sendToDownProduct(product)"><i class="fa fa-minus"></i></button>
-              <span class="number cant-id">{{product.cantidad}}</span>
-              <button class="btn btn-success" (click)="sendToUpProduct(product)"><i class="fa fa-plus"></i></button>
-            </div>
+                  <button class="btn btn-success" (click)="sendToDownProduct(product)"><i class="fa fa-minus"></i></button>
+                  <span class="number cant-id">{{product.cantidad}}</span>
+                  <button class="btn btn-success" (click)="sendToUpProduct(product)"><i class="fa fa-plus"></i></button>
+              </div>
             <div class="text-center panel-btn-delete" (click)="sendToDeleteProduct(product)"><button class="btn btn-lg btn-danger text-center">Eliminar</button></div>
           </div>
-
+          
         </div>
       </div>
     </div>

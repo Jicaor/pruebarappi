@@ -2,19 +2,19 @@
   <div class="pricing-head"><h3 class="name">{{producto.name}} {{llamar}}</h3>
     <img src="{{producto.img}}" alt="" width="100%">
     <h4><span class="price">{{producto.price | monedaColombia}}</span></h4></div>
-  <ul class="pricing-content list-unstyled">
-    <li>
-      <i class="fa" [ngClass]="{'fa-check': producto.available, 'fa-times': !producto.available}"></i>
-      <span *ngIf="producto.available"> Disponible</span>
-      <span *ngIf="!producto.available"> No disponible</span>
-    </li>
-    <li>
-      <i class="fa" [ngClass]="{'fa-star': producto.best_seller, 'fa-archive': !producto.best_seller}"></i>
-      <span *ngIf="producto.best_seller">Mas vendido</span>
-      <span *ngIf="!producto.best_seller"> Venta normal</span>
-    </li>
-  </ul>
-  <div class="pricing-footer"><p>{{producto.description}}</p>
+    <ul class="pricing-content list-unstyled">
+      <li>
+        <i class="fa" [ngClass]="{'fa-check': producto.available, 'fa-times': !producto.available}"></i>
+        <span *ngIf="producto.available"> Disponible</span>
+        <span *ngIf="!producto.available"> No disponible</span>
+      </li>
+      <li>
+        <i class="fa" [ngClass]="{'fa-star': producto.best_seller, 'fa-archive': !producto.best_seller}"></i>
+        <span *ngIf="producto.best_seller">Mas vendido</span>
+        <span *ngIf="!producto.best_seller"> Venta normal</span>
+      </li>
+    </ul>
+    <div class="pricing-footer"><p>{{producto.description}}</p>
     <button class="btn" (click)="sendToShoppingCar(producto)"><i class="fa fa-shopping-cart"></i> Añadir al carrito</button>
   </div>
 </div>
