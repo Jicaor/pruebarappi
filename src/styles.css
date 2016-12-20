@@ -838,6 +838,22 @@ section.img-bg {
     margin-bottom: 40px;
 }
 
+.count_product {
+    background-color: #1DC027;
+    font-family: "Pacifico", cursive;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    color: white;
+    border-radius: 50%;
+    font-size: 18px;
+    left: 85%;
+    top: 1%;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+}
+
 
 @media screen /*xxs*/
 and (max-width: 420px) {

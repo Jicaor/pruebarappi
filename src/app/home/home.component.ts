@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
 
     this.productosService.getJson()
         .then(respuesta => this.productos = respuesta.products.map(
-            data => new Producto(data['id'], data['name'], data['price'], data['available'], data['best_seller'], data['categories'], data['img'], data['description'])));
+            data => new Producto(data['id'], data['name'], data['price'], data['available'], data['best_seller'], data['categories'], data['img'], data['description'], 0)));
   }
 
   addToShoppindCart(producto_escogido):void{
@@ -42,18 +42,22 @@ export class HomeComponent implements OnInit {
 
   deleteProduct(producto_borrado){
     var indice = this.shopping_car.indexOf(producto_borrado.producto);
+    producto_borrado.producto.cantidad = 0;
     this.shopping_car.splice(indice,1);
   }
 
   setUpProduct(producto_aumentado){
     var indice = this.shopping_car.indexOf(producto_aumentado.producto);
-    this.shopping_car[indice].cantidad = parseInt(this.shopping_car[indice].cantidad) + 1;
+    producto_aumentado.producto.cantidad++;
+    this.shopping_car[indice].cantidad = producto_aumentado.producto.cantidad;
   }
 
   setDownProduct(producto_disminuido){
     var indice = this.shopping_car.indexOf(producto_disminuido.producto);
-    if(parseInt(this.shopping_car[indice].cantidad) != 1)
-      this.shopping_car[indice].cantidad = parseInt(this.shopping_car[indice].cantidad) - 1;
+    if(parseInt(this.shopping_car[indice].cantidad) != 1){
+      producto_disminuido.producto.cantidad--;
+      this.shopping_car[indice].cantidad = producto_disminuido.producto.cantidad;
+    }
   }
 
 }

@@ -1,5 +1,7 @@
 <div class="pricing">
-  <div class="pricing-head"><h3 class="name">{{producto.name}} {{llamar}}</h3>
+  <div class="pricing-head">
+    <span *ngIf="producto.cantidad > 0" class="count_product">{{producto.cantidad}}</span>
+    <h3 class="name">{{producto.name}} {{llamar}}</h3>
     <img src="{{producto.img}}" alt="" width="100%">
     <h4><span class="price">{{producto.price | monedaColombia}}</span></h4></div>
     <ul class="pricing-content list-unstyled">

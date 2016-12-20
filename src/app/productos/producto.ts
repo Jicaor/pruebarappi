@@ -8,8 +8,9 @@ export class Producto {
     categories: number[];
     img: string;
     description: string;
+    cantidad: number;
 
-    constructor(id: number, name: string, price: number, available: boolean, best_seller: boolean, categories: number[], img: string, description: string) {
+    constructor(id: number, name: string, price: number, available: boolean, best_seller: boolean, categories: number[], img: string, description: string, cantidad: number) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -18,6 +19,7 @@ export class Producto {
         this.categories = categories;
         this.img = img;
         this.description = description;
+        this.cantidad = cantidad;
     }
 
 }
